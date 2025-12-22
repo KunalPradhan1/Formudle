@@ -1,7 +1,11 @@
-const express = require("express");
+import getRandom from "./random.js";
+import express from "express"
+import cors from "cors"
+
+
 
 const app = express();
-const cors = require("cors");
+
 const PORT = 8080;
 
 app.use(cors());
@@ -15,3 +19,10 @@ app.listen(PORT, () => {
     console.log(`server started on port ${PORT}`);
 })
 
+
+app.get("/random", (req, res) => {
+    const driver = getRandom();
+
+    console.log(`this is the driver chosen from getRandom ${driver}`);
+    res.json(driver)
+})
