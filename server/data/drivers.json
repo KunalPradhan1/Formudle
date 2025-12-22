@@ -1,0 +1,200 @@
+[
+  {
+    "id": "max_verstappen",
+    "fullName": "Max Verstappen",
+    "team": "Red Bull Racing",
+    "nationality": "Dutch",
+    "permanentNumber": 1,
+    "dateOfBirth": "1997-09-30",
+    "championships": 3,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "sergio_perez",
+    "fullName": "Sergio Pérez",
+    "team": "Red Bull Racing",
+    "nationality": "Mexican",
+    "permanentNumber": 11,
+    "dateOfBirth": "1990-01-26",
+    "championships": 0,
+    "status": "active",
+    "era": "2010s"
+  },
+  {
+    "id": "lewis_hamilton",
+    "fullName": "Lewis Hamilton",
+    "team": "Mercedes",
+    "nationality": "British",
+    "permanentNumber": 44,
+    "dateOfBirth": "1985-01-07",
+    "championships": 7,
+    "status": "active",
+    "era": "2000s"
+  },
+  {
+    "id": "george_russell",
+    "fullName": "George Russell",
+    "team": "Mercedes",
+    "nationality": "British",
+    "permanentNumber": 63,
+    "dateOfBirth": "1998-02-15",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "charles_leclerc",
+    "fullName": "Charles Leclerc",
+    "team": "Ferrari",
+    "nationality": "Monégasque",
+    "permanentNumber": 16,
+    "dateOfBirth": "1997-10-16",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "carlos_sainz",
+    "fullName": "Carlos Sainz",
+    "team": "Ferrari",
+    "nationality": "Spanish",
+    "permanentNumber": 55,
+    "dateOfBirth": "1994-09-01",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "lando_norris",
+    "fullName": "Lando Norris",
+    "team": "McLaren",
+    "nationality": "British",
+    "permanentNumber": 4,
+    "dateOfBirth": "1999-11-13",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "oscar_piastri",
+    "fullName": "Oscar Piastri",
+    "team": "McLaren",
+    "nationality": "Australian",
+    "permanentNumber": 81,
+    "dateOfBirth": "2001-04-06",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "fernando_alonso",
+    "fullName": "Fernando Alonso",
+    "team": "Aston Martin",
+    "nationality": "Spanish",
+    "permanentNumber": 14,
+    "dateOfBirth": "1981-07-29",
+    "championships": 2,
+    "status": "active",
+    "era": "2000s"
+  },
+  {
+    "id": "lance_stroll",
+    "fullName": "Lance Stroll",
+    "team": "Aston Martin",
+    "nationality": "Canadian",
+    "permanentNumber": 18,
+    "dateOfBirth": "1998-10-29",
+    "championships": 0,
+    "status": "active",
+    "era": "2010s"
+  },
+  {
+    "id": "esteban_ocon",
+    "fullName": "Esteban Ocon",
+    "team": "Alpine",
+    "nationality": "French",
+    "permanentNumber": 31,
+    "dateOfBirth": "1996-09-17",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "pierre_gasly",
+    "fullName": "Pierre Gasly",
+    "team": "Alpine",
+    "nationality": "French",
+    "permanentNumber": 10,
+    "dateOfBirth": "1996-02-07",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "alex_albon",
+    "fullName": "Alexander Albon",
+    "team": "Williams",
+    "nationality": "Thai",
+    "permanentNumber": 23,
+    "dateOfBirth": "1996-03-23",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "franco_colapinto",
+    "fullName": "Franco Colapinto",
+    "team": "Williams",
+    "nationality": "Argentinian",
+    "permanentNumber": 43,
+    "dateOfBirth": "2003-05-27",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "valtteri_bottas",
+    "fullName": "Valtteri Bottas",
+    "team": "Stake F1 Team Kick Sauber",
+    "nationality": "Finnish",
+    "permanentNumber": 77,
+    "dateOfBirth": "1989-08-28",
+    "championships": 0,
+    "status": "active",
+    "era": "2010s"
+  },
+  {
+    "id": "zhou_guanyu",
+    "fullName": "Zhou Guanyu",
+    "team": "Stake F1 Team Kick Sauber",
+    "nationality": "Chinese",
+    "permanentNumber": 24,
+    "dateOfBirth": "1999-05-30",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s"
+  },
+  {
+    "id": "kevin_magnussen",
+    "fullName": "Kevin Magnussen",
+    "team": "Haas",
+    "nationality": "Danish",
+    "permanentNumber": 20,
+    "dateOfBirth": "1992-10-05",
+    "championships": 0,
+    "status": "active",
+    "era": "2010s"
+  },
+  {
+    "id": "nico_hulkenberg",
+    "fullName": "Nico Hülkenberg",
+    "team": "Haas",
+    "nationality": "German",
+    "permanentNumber": 27,
+    "dateOfBirth": "1987-08-19",
+    "championships": 0,
+    "status": "active",
+    "era": "2010s"
+  }
+]
