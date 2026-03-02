@@ -1,0 +1,60 @@
+{
+  "daily": [
+    {
+      "date": "2026-01-02",
+      "driverId": "max_verstappen",
+      "driverName": "Max Verstappen"
+    },
+    {
+      "date": "2026-01-18",
+      "driverId": "oscar_piastri",
+      "driverName": "Oscar Piastri"
+    },
+    {
+      "date": "2026-01-20",
+      "driverId": "carlos_sainz",
+      "driverName": "Carlos Sainz"
+    },
+    {
+      "date": "2026-01-30",
+      "driverId": "lance_stroll",
+      "driverName": "Lance Stroll"
+    },
+    {
+      "date": "2026-02-01",
+      "driverId": "fernando_alonso",
+      "driverName": "Fernando Alonso"
+    },
+    {
+      "date": "2026-02-07",
+      "driverId": "pierre_gasly",
+      "driverName": "Pierre Gasly"
+    },
+    {
+      "date": "2026-02-10",
+      "driverId": "nico_hulkenberg",
+      "driverName": "Nico Hülkenberg"
+    },
+    {
+      "date": "2026-02-11",
+      "driverId": "valtteri_bottas",
+      "driverName": "Valtteri Bottas"
+    },
+    {
+      "date": "2026-02-12",
+      "driverId": "lando_norris",
+      "driverName": "Lando Norris"
+    },
+    {
+      "date": "2026-02-17",
+      "driverId": "charles_leclerc",
+      "driverName": "Charles Leclerc"
+    },
+    {
+      "date": "2026-03-02",
+      "driverId": "alex_albon",
+      "driverName": "Alexander Albon"
+    }
+  ],
+  "lastUpdated": "2026-03-02T00:44:02.441Z"
+}
