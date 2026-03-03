@@ -8,29 +8,32 @@
     "dateOfBirth": "1997-09-30",
     "championships": 3,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/max-verstappen-f1-driver-profile-picture.png"
   },
   {
     "id": "sergio_perez",
     "fullName": "Sergio Pérez",
-    "team": "Red Bull Racing",
+    "team": "Cadillac",
     "nationality": "Mexican",
     "permanentNumber": 11,
     "dateOfBirth": "1990-01-26",
     "championships": 0,
     "status": "active",
-    "era": "2010s"
+    "era": "2010s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/sergio-perez-f1-driver-profile-picture.png"
   },
   {
     "id": "lewis_hamilton",
     "fullName": "Lewis Hamilton",
-    "team": "Mercedes",
+    "team": "Ferrari",
     "nationality": "British",
     "permanentNumber": 44,
     "dateOfBirth": "1985-01-07",
     "championships": 7,
     "status": "active",
-    "era": "2000s"
+    "era": "2000s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/lewis-hamilton-f1-driver-profile-picture.png"
   },
   {
     "id": "george_russell",
@@ -41,7 +44,8 @@
     "dateOfBirth": "1998-02-15",
     "championships": 0,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/george-russell-f1-driver-profile-picture.png"
   },
   {
     "id": "charles_leclerc",
@@ -52,18 +56,20 @@
     "dateOfBirth": "1997-10-16",
     "championships": 0,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot":"https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/charles-leclerc-f1-driver-profile-picture.png"
   },
   {
     "id": "carlos_sainz",
     "fullName": "Carlos Sainz",
-    "team": "Ferrari",
+    "team": "Williams",
     "nationality": "Spanish",
     "permanentNumber": 55,
     "dateOfBirth": "1994-09-01",
     "championships": 0,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/carlos-sainz-f1-driver-profile-picture.png"
   },
   {
     "id": "lando_norris",
@@ -72,9 +78,10 @@
     "nationality": "British",
     "permanentNumber": 4,
     "dateOfBirth": "1999-11-13",
-    "championships": 0,
+    "championships": 1,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/lando-norris-f1-driver-profile-picture.png"
   },
   {
     "id": "oscar_piastri",
@@ -85,7 +92,8 @@
     "dateOfBirth": "2001-04-06",
     "championships": 0,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/oscar-piastri-f1-driver-profile-picture.png"
   },
   {
     "id": "fernando_alonso",
@@ -96,7 +104,8 @@
     "dateOfBirth": "1981-07-29",
     "championships": 2,
     "status": "active",
-    "era": "2000s"
+    "era": "2000s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/fernando-alonso-f1-driver-profile-picture.png"
   },
   {
     "id": "lance_stroll",
@@ -107,18 +116,20 @@
     "dateOfBirth": "1998-10-29",
     "championships": 0,
     "status": "active",
-    "era": "2010s"
+    "era": "2010s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/lance-stroll-f1-driver-profile-picture.png"
   },
   {
     "id": "esteban_ocon",
     "fullName": "Esteban Ocon",
-    "team": "Alpine",
+    "team": "Haas",
     "nationality": "French",
     "permanentNumber": 31,
     "dateOfBirth": "1996-09-17",
     "championships": 0,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/esteban-ocon-f1-driver-profile-picture.png"
   },
   {
     "id": "pierre_gasly",
@@ -129,7 +140,8 @@
     "dateOfBirth": "1996-02-07",
     "championships": 0,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/pierre-gasly-f1-driver-profile-picture.png"
   },
   {
     "id": "alex_albon",
@@ -140,29 +152,32 @@
     "dateOfBirth": "1996-03-23",
     "championships": 0,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/alex-albon-f1-driver-profile-picture.png"
   },
   {
     "id": "franco_colapinto",
     "fullName": "Franco Colapinto",
-    "team": "Williams",
+    "team": "Alpine",
     "nationality": "Argentinian",
     "permanentNumber": 43,
     "dateOfBirth": "2003-05-27",
     "championships": 0,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/franco-colapinto-f1-driver-profile-picture.png"
   },
   {
     "id": "valtteri_bottas",
     "fullName": "Valtteri Bottas",
-    "team": "Stake F1 Team Kick Sauber",
+    "team": "Cadillac",
     "nationality": "Finnish",
     "permanentNumber": 77,
     "dateOfBirth": "1989-08-28",
     "championships": 0,
     "status": "active",
-    "era": "2010s"
+    "era": "2010s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/valtteri-bottas-f1-driver-profile-picture.png"
   },
   {
     "id": "zhou_guanyu",
@@ -173,7 +188,8 @@
     "dateOfBirth": "1999-05-30",
     "championships": 0,
     "status": "active",
-    "era": "2020s"
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/zhou-guanyu-f1-driver-profile-picture.png"
   },
   {
     "id": "kevin_magnussen",
@@ -184,17 +200,82 @@
     "dateOfBirth": "1992-10-05",
     "championships": 0,
     "status": "active",
-    "era": "2010s"
+    "era": "2010s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/kevin-magnussen-f1-driver-profile-picture.png"
   },
   {
     "id": "nico_hulkenberg",
     "fullName": "Nico Hülkenberg",
-    "team": "Haas",
+    "team": "Audi",
     "nationality": "German",
     "permanentNumber": 27,
     "dateOfBirth": "1987-08-19",
     "championships": 0,
     "status": "active",
-    "era": "2010s"
+    "era": "2010s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/nico-hulkenberg-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "liam_lawson",
+    "fullName": "Liam Lawson",
+    "team": "Racing Bulls",
+    "nationality": "New Zealander",
+    "permanentNumber": 30,
+    "dateOfBirth": "2002-02-11",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/liam-lawson-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "arvid_linbald",
+    "fullName": "Arvid Lindblad",
+    "team": "Racing Bulls",
+    "nationality": "British",
+    "permanentNumber": 41,
+    "dateOfBirth": "2007-08-08",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/arvid-lindblad-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "ollie_bearman",
+    "fullName": "Oliver Bearman",
+    "team": "Haas",
+    "nationality": "British",
+    "permanentNumber": 87,
+    "dateOfBirth": "2005-05-08",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/oliver-bearman-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "gabi_bortoleto",
+    "fullName": "Gabriel Bortoleto",
+    "team": "Audi",
+    "nationality": "Brazilian",
+    "permanentNumber": 5,
+    "dateOfBirth": "2004-10-14",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/gabriel-bortoleto-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "isack_hadjar",
+    "fullName": "Isack Hadjar",
+    "team": "Red Bull Racing",
+    "nationality": "French",
+    "permanentNumber": 6,
+    "dateOfBirth": "2004-09-28",
+    "championships": 0,
+    "status": "active",
+    "era": "2020s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/isack-hadjar-f1-driver-profile-picture.png"
   }
+  
+  
+
 ]

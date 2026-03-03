@@ -12,6 +12,7 @@ interface Driver {
   championships: number;
   status: string;
   era: string;
+  headshot?: string;
 }
 
 
@@ -129,7 +130,7 @@ export default function Home() {
                 ></div>
               ))}
             </div>
-            <h1 className="text-5xl font-bold text-white tracking-wider">
+            <h1 className="text-5xl font-bold text-white tracking-wider" style={{fontFamily: 'f1words, Arial'}}>
               FORMULDLE
             </h1>
             <div className="grid grid-cols-4 grid-rows-4 w-16 h-16 border-2 border-white">
@@ -213,14 +214,21 @@ export default function Home() {
     <div key={idx} className="flex -space-x-[2px] mb-2">
       {/* Name - NO FLIP */}
       <div className="flex-1 h-24 px-2 bg-gray-700 border-2 border-gray-600 text-center text-base text-white flex items-center justify-center">
-        {driver.fullName}
+        {driver.headshot ? (
+        <img 
+          src={driver.headshot} 
+          alt={driver.fullName}
+          className="h-full w-full object-contain"
+        />
+      ) : (
+        driver.fullName
+      )}
       </div>
 {/* Team - FLIPS */}
 <div 
-  className="flex-1 h-24 px-2 border-2 border-gray-600 text-center text-base text-white flex items-center justify-center"
+  className="game-tile"
   style={{
     animation: animatingRow === idx ? `flipTile 1s ease ${0 * 0.5}s both` : 'none',
-    transformStyle: 'preserve-3d',
     backgroundColor: animatingRow !== idx ? (random && driver.team === random.team ? '#16a34a' : '#dc2626') : undefined,
     // @ts-ignore
     '--tile-color': random && driver.team === random.team ? '#16a34a' : '#dc2626',
@@ -240,46 +248,68 @@ export default function Home() {
 
 {/* Age - FLIPS */}
 <div 
-  className="flex-1 h-24 px-2 border-2 border-gray-600 text-center text-base text-white flex items-center justify-center gap-2"
+  className="game-tile"
   style={{
     animation: animatingRow === idx ? `flipTile 1s ease ${1 * 0.5}s both` : 'none',
-    transformStyle: 'preserve-3d',
     backgroundColor: animatingRow !== idx ? (random && calculateAge(driver.dateOfBirth) === calculateAge(random.dateOfBirth) ? '#16a34a' : '#dc2626') : undefined,
     // @ts-ignore
     '--tile-color': random && calculateAge(driver.dateOfBirth) === calculateAge(random.dateOfBirth) ? '#16a34a' : '#dc2626',
   }}
 >
-  <span 
-    style={{
+  {(() => {
+    let age = calculateAge(driver.dateOfBirth);
+    if (random) {
+      let randomAge = calculateAge(random.dateOfBirth);
+      
+      if (age < randomAge) {
+        return (
+          <>
+            <div 
+              className="arrow-container" 
+              style={{
+                animation: animatingRow === idx ? `arrowFadeIn 1s ease ${1 * 0.5}s both` : 'none',
+                opacity: animatingRow === idx ? undefined : 0.25,
+              }}
+            >
+              <div className="arrow-up-head"></div>
+              <div className="arrow-shaft"></div>
+            </div>
+            <span className="tile-text" style={{
+              animation: animatingRow === idx ? `flipText 1s ease ${1 * 0.5}s both` : 'none',
+            }}>{age}</span>
+          </>
+        );
+      } else if (age > randomAge) {
+        return (
+          <>
+            <div 
+              className="arrow-container" 
+              style={{
+                animation: animatingRow === idx ? `arrowFadeIn 1s ease ${1 * 0.5}s both` : 'none',
+                opacity: animatingRow === idx ? undefined : 0.25,
+              }}
+            >
+              <div className="arrow-shaft"></div>
+              <div className="arrow-down-head"></div>
+            </div>
+            <span className="tile-text" style={{
+              animation: animatingRow === idx ? `flipText 1s ease ${1 * 0.5}s both` : 'none',
+            }}>{age}</span>
+          </>
+        );
+      }
+    } 
+    return <span className="tile-text" style={{
       animation: animatingRow === idx ? `flipText 1s ease ${1 * 0.5}s both` : 'none',
-      transformStyle: 'preserve-3d',
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: '0.5rem'
-    }}
-  >
-    {(() => {
-      let age = calculateAge(driver.dateOfBirth);
-      if (random) {
-        let randomAge = calculateAge(random.dateOfBirth);
-        
-        if (age < randomAge) {
-          return <><span>{age}</span><span className="text-xl">↑</span></>;
-        } else if (age > randomAge) {
-          return <><span>{age}</span><span className="text-xl">↓</span></>;
-        }
-      } 
-      return age;
-    })()}
-  </span>
+    }}>{age}</span>;
+  })()}
 </div>
 
 {/* Nationality - FLIPS */}
 <div 
-  className="flex-1 h-24 px-2 border-2 border-gray-600 text-center text-base text-white flex items-center justify-center"
+  className="game-tile"
   style={{
     animation: animatingRow === idx ? `flipTile 1s ease ${2 * 0.5}s both` : 'none',
-    transformStyle: 'preserve-3d',
     backgroundColor: animatingRow !== idx ? (random && driver.nationality === random.nationality ? '#16a34a' : '#dc2626') : undefined,
     // @ts-ignore
     '--tile-color': random && driver.nationality === random.nationality ? '#16a34a' : '#dc2626',
@@ -299,74 +329,120 @@ export default function Home() {
 
 {/* Championships - FLIPS */}
 <div 
-  className="flex-1 h-24 px-2 border-2 border-gray-600 text-center text-base text-white flex items-center justify-center gap-2"
+  className="game-tile"
   style={{
     animation: animatingRow === idx ? `flipTile 1s ease ${3 * 0.5}s both` : 'none',
-    transformStyle: 'preserve-3d',
     backgroundColor: animatingRow !== idx ? (random && driver.championships === random.championships ? '#16a34a' : '#dc2626') : undefined,
     // @ts-ignore
     '--tile-color': random && driver.championships === random.championships ? '#16a34a' : '#dc2626',
   }}
 >
-  <span 
-    style={{
-      animation: animatingRow === idx ? `flipText 1s ease ${3 * 0.5}s both` : 'none',
-      transformStyle: 'preserve-3d',
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: '0.5rem'
-    }}
-  >
-    {(() => {
-      if(random){
-        let randNum = random?.championships;
-        let driveNum = driver.championships;
-        if(driveNum < randNum){
-          return <><span>{driveNum}</span><span className="text-xl">↑</span></>
-        }
-        else if(driveNum > randNum){
-          return <><span>{driveNum}</span><span className="text-xl">↓</span></>
-        }
+  {(() => {
+    if(random){
+      let randNum = random?.championships;
+      let driveNum = driver.championships;
+      if(driveNum < randNum){
+        return (
+          <>
+            <div 
+              className="arrow-container" 
+              style={{
+                animation: animatingRow === idx ? `arrowFadeIn 1s ease ${3 * 0.5}s both` : 'none',
+                opacity: animatingRow === idx ? undefined : 0.25,
+              }}
+            >
+              <div className="arrow-up-head"></div>
+              <div className="arrow-shaft"></div>
+            </div>
+            <span className="tile-text" style={{
+              animation: animatingRow === idx ? `flipText 1s ease ${3 * 0.5}s both` : 'none',
+            }}>{driveNum}</span>
+          </>
+        );
       }
-      return driver.championships;
-    })()}
-  </span>
+      else if(driveNum > randNum){
+        return (
+          <>
+            <div 
+              className="arrow-container" 
+              style={{
+                animation: animatingRow === idx ? `arrowFadeIn 1s ease ${3 * 0.5}s both` : 'none',
+                opacity: animatingRow === idx ? undefined : 0.25,
+              }}
+            >
+              <div className="arrow-shaft"></div>
+              <div className="arrow-down-head"></div>
+            </div>
+            <span className="tile-text" style={{
+              animation: animatingRow === idx ? `flipText 1s ease ${3 * 0.5}s both` : 'none',
+            }}>{driveNum}</span>
+          </>
+        );
+      }
+    }
+    return <span className="tile-text" style={{
+      animation: animatingRow === idx ? `flipText 1s ease ${3 * 0.5}s both` : 'none',
+    }}>{driver.championships}</span>;
+  })()}
 </div>
 
 {/* Racing Number - FLIPS */}
 <div 
-  className="flex-1 h-24 px-2 border-2 border-gray-600 text-center text-base text-white flex items-center justify-center gap-2"
+  className="game-tile"
   style={{
     animation: animatingRow === idx ? `flipTile 1s ease ${4 * 0.5}s both` : 'none',
-    transformStyle: 'preserve-3d',
     backgroundColor: animatingRow !== idx ? (random && driver.permanentNumber === random.permanentNumber ? '#16a34a' : '#dc2626') : undefined,
     // @ts-ignore
     '--tile-color': random && driver.permanentNumber === random.permanentNumber ? '#16a34a' : '#dc2626',
   }}
 >
-  <span 
-    style={{
-      animation: animatingRow === idx ? `flipText 1s ease ${4 * 0.5}s both` : 'none',
-      transformStyle: 'preserve-3d',
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: '0.5rem'
-    }}
-  >
-    {(() => {
-      if(random){
-        let randNum = random?.permanentNumber;
-        let driveNum = driver.permanentNumber;
-        if(driveNum < randNum){
-          return <><span>{driveNum}</span><span className="text-xl">↑</span></>
-        }
-        else if(driveNum > randNum){
-          return <><span>{driveNum}</span><span className="text-xl">↓</span></>
-        }
+  {(() => {
+    if(random){
+      let randNum = random?.permanentNumber;
+      let driveNum = driver.permanentNumber;
+      if(driveNum < randNum){
+        return (
+          <>
+            <div 
+              className="arrow-container" 
+              style={{
+                animation: animatingRow === idx ? `arrowFadeIn 1s ease ${4 * 0.5}s both` : 'none',
+                opacity: animatingRow === idx ? undefined : 0.25,
+              }}
+            >
+              <div className="arrow-up-head"></div>
+              <div className="arrow-shaft"></div>
+            </div>
+            <span className="tile-text" style={{
+              animation: animatingRow === idx ? `flipText 1s ease ${4 * 0.5}s both` : 'none',
+            }}>{driveNum}</span>
+          </>
+        );
       }
-      return driver.permanentNumber;
-    })()}
-  </span>
+      else if(driveNum > randNum){
+        return (
+          <>
+            <div 
+              className="arrow-container" 
+              style={{
+                animation: animatingRow === idx ? `arrowFadeIn 1s ease ${4 * 0.5}s both` : 'none',
+                opacity: animatingRow === idx ? undefined : 0.25,
+              }}
+            >
+              <div className="arrow-shaft"></div>
+              <div className="arrow-down-head"></div>
+            </div>
+            <span className="tile-text" style={{
+              animation: animatingRow === idx ? `flipText 1s ease ${4 * 0.5}s both` : 'none',
+            }}>{driveNum}</span>
+          </>
+        );
+      }
+    }
+    return <span className="tile-text" style={{
+      animation: animatingRow === idx ? `flipText 1s ease ${4 * 0.5}s both` : 'none',
+    }}>{driver.permanentNumber}</span>;
+  })()}
       </div>
     </div>
   ))}
