@@ -25,8 +25,15 @@ interface History {
 
 function todayDate(): string {
     const now = new Date();
-    console.log(`today date ran ${now}`);
-    return now.toISOString().split('T')[0];
+    const pstDate = new Date(now.toLocaleString('en-US', {timeZone: 'America/Los_Angeles'}));
+    
+    const year = pstDate.getFullYear();
+    const month = String(pstDate.getMonth() + 1).padStart(2, '0');
+    const day = String(pstDate.getDate()).padStart(2, '0');
+    
+    const dateStr = `${year}-${month}-${day}`;
+    console.log(`today date ran ${dateStr} (PST)`);
+    return dateStr;
 }
 
 function loadHistoryFile(): History {
@@ -57,7 +64,8 @@ function saveHistoryFile(hist: History): void {
 
 function getRecentDrivers(hist: History): Set<string> {
     const recent = new Set<string>();
-    const today = new Date();
+    const now = new Date();
+    const today = new Date(now.toLocaleString('en-US', {timeZone: 'America/Los_Angeles'}))
 
     hist.daily.forEach(entry => {
         const entryDate = new Date(entry.date);

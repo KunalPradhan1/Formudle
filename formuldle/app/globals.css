@@ -74,19 +74,19 @@ body {
 /* Text flips with box but fades during upside-down portion */
 @keyframes flipText {
   0% {
-    transform: rotateX(0deg) translateZ(10px);
+    transform: rotateX(0deg);
     opacity: 1;
   }
   45% {
-    transform: rotateX(81deg) translateZ(10px);
+    transform: rotateX(81deg);
     opacity: 0;
   }
   55% {
-    transform: rotateX(99deg) translateZ(10px);
+    transform: rotateX(99deg);
     opacity: 0;
   }
   100% {
-    transform: rotateX(180deg) translateZ(10px);
+    transform: rotateX(180deg);
     opacity: 1;
   }
 }
@@ -139,12 +139,27 @@ body {
 }
 
 .tile-text {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 10;
   font-size: 1.5rem;
   font-weight: bold;
   transform-style: preserve-3d;
   font-family: box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.tile-text > div {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 /* Arrow container */

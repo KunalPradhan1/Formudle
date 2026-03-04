@@ -1,6 +1,8 @@
 
 "use client"
 import React, {useEffect, useState}  from 'react'
+import Cookies from 'js-cookie'
+import { AutoTextSize } from 'auto-text-size'
 
 interface Driver {
   id: string;
@@ -16,6 +18,14 @@ interface Driver {
 }
 
 
+interface GameState {
+  selectedDrivers: Driver[];
+  gameWon: boolean;
+  randomDriverid: string;
+  date: string;
+}
+
+
 export default function Home() {
 
   const [message, setMessage] = useState("Loading");
@@ -27,13 +37,25 @@ export default function Home() {
   const [gameWon, setGameWon] = useState(false);
   // const [carPosition, setCarPosition] = useState(-100);
   const [animatingRow, setAnimatingRow] = useState<number | null>(null);
+  const [copied, setCopied] = useState(false);
 
 
   const [selectedDrivers, setSelectedDrivers] = useState<Driver[]>([]);
 
 
-  const answerCategories = [ "Racer" , "Last Team", "Age", "Nationality", "Championships", "Racing Number"];
+  const answerCategories = [ "Racer" , "Last Team", "Age", "Origin", "Championships", "Racing Number"];
 
+  useEffect(()=> {
+    if(random && selectedDrivers.length>0){
+      const gameState : GameState = {
+        selectedDrivers,
+        gameWon,
+        randomDriverid: random.id,
+        date: new Date().toDateString()
+      };
+      Cookies.set('formudle_game', JSON.stringify(gameState), {expires: 1});
+    }
+  }, [selectedDrivers,gameWon, random])
 
   //testing search 
   
@@ -58,6 +80,18 @@ export default function Home() {
         //console.log(data)
         setMessage(data.fullName)
         setRandom(data);
+
+        const saved = Cookies.get('formudle_game');
+        if(saved){
+          const gameState: GameState = JSON.parse(saved);
+          if(gameState.randomDriverid === data.id){
+            setSelectedDrivers(gameState.selectedDrivers);
+            setGameWon(gameState.gameWon);
+          }
+          else{
+            Cookies.remove('formudle_game');
+          }
+        }
       }
     )
 
@@ -103,6 +137,46 @@ export default function Home() {
     }
 
     return age;
+  }
+
+  const generateShareText = () => {
+    if (!random) return '';
+    
+    const rows = selectedDrivers.map(driver => {
+      const teamMatch = driver.team === random.team;
+      const ageMatch = calculateAge(driver.dateOfBirth) === calculateAge(random.dateOfBirth);
+      const ageDiff = calculateAge(driver.dateOfBirth) - calculateAge(random.dateOfBirth);
+      const nationalityMatch = driver.nationality === random.nationality;
+      const championshipsMatch = driver.championships === random.championships;
+      const championshipsDiff = driver.championships - random.championships;
+      const numberMatch = driver.permanentNumber === random.permanentNumber;
+      const numberDiff = driver.permanentNumber - random.permanentNumber;
+
+      const teamEmoji = teamMatch ? '🟩' : '🟥';
+      const ageEmoji = ageMatch ? '🟩' : (ageDiff > 0 ? '⬇️' : '⬆️');
+      const nationalityEmoji = nationalityMatch ? '🟩' : '🟥';
+      const championshipsEmoji = championshipsMatch ? '🟩' : (championshipsDiff > 0 ? '⬇️' : '⬆️');
+      const numberEmoji = numberMatch ? '🟩' : (numberDiff > 0 ? '⬇️' : '⬆️');
+
+      return `${teamEmoji}${ageEmoji}${nationalityEmoji}${championshipsEmoji}${numberEmoji}`;
+    }).reverse();
+
+    const guessCount = selectedDrivers.length;
+    const today = new Date();
+    const dayOfYear = Math.floor((today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
+
+    return `I found Formuldle driver #${dayOfYear} in ${guessCount} ${guessCount === 1 ? 'guess' : 'guesses'}! 🏎️\n\n${rows.join('\n')}\n\nhttps://formuldle.com`;
+  }
+
+  const copyShareText = async () => {
+    const text = generateShareText();
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
   }
   
   return (
@@ -235,15 +309,16 @@ export default function Home() {
   }}
 >
   <span 
+    className="tile-text"
     style={{
       animation: animatingRow === idx ? `flipText 1s ease ${0 * 0.5}s both` : 'none',
-      transformStyle: 'preserve-3d',
-      display: 'inline-flex',
-      alignItems: 'center'
     }}
   >
-    {driver.team}
+    <AutoTextSize mode='box' minFontSizePx={12} maxFontSizePx={36}>
+      {driver.team}
+    </AutoTextSize>
   </span>
+ 
 </div>
 
 {/* Age - FLIPS */}
@@ -316,14 +391,14 @@ export default function Home() {
   }}
 >
   <span 
+    className="tile-text"
     style={{
       animation: animatingRow === idx ? `flipText 1s ease ${2 * 0.5}s both` : 'none',
-      transformStyle: 'preserve-3d',
-      display: 'inline-flex',
-      alignItems: 'center'
     }}
   >
-    {driver.nationality}
+    <AutoTextSize mode='box' minFontSizePx={12} maxFontSizePx={36}>
+      {driver.nationality}
+    </AutoTextSize>
   </span>
 </div>
 
@@ -450,7 +525,16 @@ export default function Home() {
     
     {gameWon && (
     <div className="mt-6 p-4 bg-green-600 border-2 border-green-400 rounded-lg text-center">
-      <p className="text-2xl font-bold text-white">🏆 Congratulations! You won! 🏆</p>
+      <p className="text-2xl font-bold text-white mb-4">🏆 Congratulations! You won! 🏆</p>
+      <p className="text-white mb-4 whitespace-pre-line font-mono text-sm bg-green-700 p-3 rounded">
+        {generateShareText()}
+      </p>
+      <button
+        onClick={copyShareText}
+        className="px-6 py-2 bg-white text-green-700 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+      >
+        {copied ? '✓ Copied!' : '📋 Copy Results'}
+      </button>
     </div>
   )}
     
@@ -462,7 +546,7 @@ export default function Home() {
 
   
     
-    <p className="text-xl text-gray-400 text-center">Mystery Driver: {message}</p>
+    {/* <p className="text-xl text-gray-400 text-center">Mystery Driver: {message}</p> */}
   </div>
 </main>
 
