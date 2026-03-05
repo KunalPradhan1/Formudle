@@ -6,7 +6,7 @@
     "nationality": "Dutch",
     "permanentNumber": 1,
     "dateOfBirth": "1997-09-30",
-    "championships": 3,
+    "podiums": 127,
     "status": "active",
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/max-verstappen-f1-driver-profile-picture.png"
@@ -18,7 +18,7 @@
     "nationality": "Mexican",
     "permanentNumber": 11,
     "dateOfBirth": "1990-01-26",
-    "championships": 0,
+    "podiums": 39,
     "status": "active",
     "era": "2010s",
     "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/sergio-perez-f1-driver-profile-picture.png"
@@ -30,7 +30,7 @@
     "nationality": "Great Britain",
     "permanentNumber": 44,
     "dateOfBirth": "1985-01-07",
-    "championships": 7,
+    "podiums": 202,
     "status": "active",
     "era": "2000s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/lewis-hamilton-f1-driver-profile-picture.png"
@@ -42,7 +42,7 @@
     "nationality": "Great Britain",
     "permanentNumber": 63,
     "dateOfBirth": "1998-02-15",
-    "championships": 0,
+    "podiums": 24,
     "status": "active",
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/george-russell-f1-driver-profile-picture.png"
@@ -54,7 +54,7 @@
     "nationality": "Monaco",
     "permanentNumber": 16,
     "dateOfBirth": "1997-10-16",
-    "championships": 0,
+    "podiums": 50,
     "status": "active",
     "era": "2020s",
     "headshot":"https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/charles-leclerc-f1-driver-profile-picture.png"
@@ -66,7 +66,7 @@
     "nationality": "Spanish",
     "permanentNumber": 55,
     "dateOfBirth": "1994-09-01",
-    "championships": 0,
+    "podiums": 29,
     "status": "active",
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/carlos-sainz-f1-driver-profile-picture.png"
@@ -78,7 +78,7 @@
     "nationality": "Great Britain",
     "permanentNumber": 4,
     "dateOfBirth": "1999-11-13",
-    "championships": 1,
+    "podiums": 44,
     "status": "active",
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/lando-norris-f1-driver-profile-picture.png"
@@ -90,7 +90,7 @@
     "nationality": "Australia",
     "permanentNumber": 81,
     "dateOfBirth": "2001-04-06",
-    "championships": 0,
+    "podiums": 26,
     "status": "active",
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/oscar-piastri-f1-driver-profile-picture.png"
@@ -102,7 +102,7 @@
     "nationality": "Spain",
     "permanentNumber": 14,
     "dateOfBirth": "1981-07-29",
-    "championships": 2,
+    "podiums": 106,
     "status": "active",
     "era": "2000s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/fernando-alonso-f1-driver-profile-picture.png"
@@ -114,7 +114,7 @@
     "nationality": "Canada",
     "permanentNumber": 18,
     "dateOfBirth": "1998-10-29",
-    "championships": 0,
+    "podiums": 3,
     "status": "active",
     "era": "2010s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/lance-stroll-f1-driver-profile-picture.png"
@@ -126,7 +126,7 @@
     "nationality": "France",
     "permanentNumber": 31,
     "dateOfBirth": "1996-09-17",
-    "championships": 0,
+    "podiums": 4,
     "status": "active",
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/esteban-ocon-f1-driver-profile-picture.png"
@@ -138,7 +138,7 @@
     "nationality": "France",
     "permanentNumber": 10,
     "dateOfBirth": "1996-02-07",
-    "championships": 0,
+    "podiums": 5,
     "status": "active",
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/pierre-gasly-f1-driver-profile-picture.png"
@@ -150,7 +150,7 @@
     "nationality": "Thailand",
     "permanentNumber": 23,
     "dateOfBirth": "1996-03-23",
-    "championships": 0,
+    "podiums": 2,
     "status": "active",
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/alex-albon-f1-driver-profile-picture.png"
@@ -162,7 +162,7 @@
     "nationality": "Argentina",
     "permanentNumber": 43,
     "dateOfBirth": "2003-05-27",
-    "championships": 0,
+    "podiums": 0,
     "status": "active",
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/franco-colapinto-f1-driver-profile-picture.png"
@@ -174,7 +174,7 @@
     "nationality": "Finland",
     "permanentNumber": 77,
     "dateOfBirth": "1989-08-28",
-    "championships": 0,
+    "podiums": 67,
     "status": "active",
     "era": "2010s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/valtteri-bottas-f1-driver-profile-picture.png"
@@ -186,7 +186,7 @@
     "nationality": "China",
     "permanentNumber": 24,
     "dateOfBirth": "1999-05-30",
-    "championships": 0,
+    "podiums": 0,
     "status": "active",
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/zhou-guanyu-f1-driver-profile-picture.png"
@@ -198,7 +198,7 @@
     "nationality": "Danish",
     "permanentNumber": 20,
     "dateOfBirth": "1992-10-05",
-    "championships": 0,
+    "podiums": 1,
     "status": "active",
     "era": "2010s",
     "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/kevin-magnussen-f1-driver-profile-picture.png"
@@ -210,7 +210,7 @@
     "nationality": "Germany",
     "permanentNumber": 27,
     "dateOfBirth": "1987-08-19",
-    "championships": 0,
+    "podiums": 1,
     "status": "active",
     "era": "2010s",
     "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/nico-hulkenberg-f1-driver-profile-picture.png"
@@ -222,7 +222,7 @@
     "nationality": "New Zealand",
     "permanentNumber": 30,
     "dateOfBirth": "2002-02-11",
-    "championships": 0,
+    "podiums": 0,
     "status": "active",
     "era": "2020s",
     "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/liam-lawson-f1-driver-profile-picture.png"
@@ -234,7 +234,7 @@
     "nationality": "Great Britain",
     "permanentNumber": 41,
     "dateOfBirth": "2007-08-08",
-    "championships": 0,
+    "podiums": 0,
     "status": "active",
     "era": "2020s",
     "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/arvid-lindblad-f1-driver-profile-picture.png"
@@ -246,7 +246,7 @@
     "nationality": "Great Britain",
     "permanentNumber": 87,
     "dateOfBirth": "2005-05-08",
-    "championships": 0,
+    "podiums": 0,
     "status": "active",
     "era": "2020s",
     "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/oliver-bearman-f1-driver-profile-picture.png"
@@ -258,7 +258,7 @@
     "nationality": "Brazil",
     "permanentNumber": 5,
     "dateOfBirth": "2004-10-14",
-    "championships": 0,
+    "podiums": 0,
     "status": "active",
     "era": "2020s",
     "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/gabriel-bortoleto-f1-driver-profile-picture.png"
@@ -270,7 +270,7 @@
     "nationality": "France",
     "permanentNumber": 6,
     "dateOfBirth": "2004-09-28",
-    "championships": 0,
+    "podiums": 1,
     "status": "active",
     "era": "2020s",
     "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/isack-hadjar-f1-driver-profile-picture.png"

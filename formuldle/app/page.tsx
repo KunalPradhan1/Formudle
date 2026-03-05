@@ -1,6 +1,6 @@
 
 "use client"
-import React, {useEffect, useState}  from 'react'
+import React, {useEffect, useState, useRef}  from 'react'
 import Cookies from 'js-cookie'
 import { AutoTextSize } from 'auto-text-size'
 
@@ -11,7 +11,7 @@ interface Driver {
   nationality: string;
   permanentNumber: number;
   dateOfBirth: string;
-  championships: number;
+  podiums: number;
   status: string;
   era: string;
   headshot?: string;
@@ -42,8 +42,9 @@ export default function Home() {
 
   const [selectedDrivers, setSelectedDrivers] = useState<Driver[]>([]);
 
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const answerCategories = [ "Racer" , "Last Team", "Age", "Origin", "Championships", "Racing Number"];
+  const answerCategories = [ "Racer" , "Last Team", "Age", "Origin", "Podiums", "Racing Number"];
 
   useEffect(()=> {
     if(random && selectedDrivers.length>0){
@@ -71,6 +72,19 @@ export default function Home() {
       setShowDropdown(filtered.length > 0);
     }
   }, [searchQuery,drivers]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setShowDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     fetch("/api/random").then(
@@ -147,25 +161,25 @@ export default function Home() {
       const ageMatch = calculateAge(driver.dateOfBirth) === calculateAge(random.dateOfBirth);
       const ageDiff = calculateAge(driver.dateOfBirth) - calculateAge(random.dateOfBirth);
       const nationalityMatch = driver.nationality === random.nationality;
-      const championshipsMatch = driver.championships === random.championships;
-      const championshipsDiff = driver.championships - random.championships;
+      const podiumsMatch = driver.podiums === random.podiums;
+      const podiumsDiff = driver.podiums - random.podiums;
       const numberMatch = driver.permanentNumber === random.permanentNumber;
       const numberDiff = driver.permanentNumber - random.permanentNumber;
 
       const teamEmoji = teamMatch ? '🟩' : '🟥';
       const ageEmoji = ageMatch ? '🟩' : (ageDiff > 0 ? '⬇️' : '⬆️');
       const nationalityEmoji = nationalityMatch ? '🟩' : '🟥';
-      const championshipsEmoji = championshipsMatch ? '🟩' : (championshipsDiff > 0 ? '⬇️' : '⬆️');
+      const podiumsEmoji = podiumsMatch ? '🟩' : (podiumsDiff > 0 ? '⬇️' : '⬆️');
       const numberEmoji = numberMatch ? '🟩' : (numberDiff > 0 ? '⬇️' : '⬆️');
 
-      return `${teamEmoji}${ageEmoji}${nationalityEmoji}${championshipsEmoji}${numberEmoji}`;
+      return `${teamEmoji}${ageEmoji}${nationalityEmoji}${podiumsEmoji}${numberEmoji}`;
     }).reverse();
 
     const guessCount = selectedDrivers.length;
     const today = new Date();
     const dayOfYear = Math.floor((today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
 
-    return `I found Formuldle driver #${dayOfYear} in ${guessCount} ${guessCount === 1 ? 'guess' : 'guesses'}! 🏎️\n\n${rows.join('\n')}\n\nhttps://formuldle.com`;
+    return `I found Formuldle driver #${dayOfYear} in ${guessCount} ${guessCount === 1 ? 'guess' : 'guesses'}! 🏎️\n\n${rows.join('\n')}\n\nhttps://formudle.one`;
   }
 
   const copyShareText = async () => {
@@ -224,10 +238,10 @@ export default function Home() {
       {/* Main content */}
       <main className="relative z-10 container mx-auto px-4 py-12">
   <div className="bg-gray-900/80 backdrop-blur-sm border-2 border-red-600 rounded-lg p-8 max-w-2xl mx-auto shadow-2xl">
-    <h2 className="text-2xl font-bold text-white mb-6 text-center">Guess the Driver</h2>
+    <h2 className="text-2xl font-bold text-white mb-6 text-center" style={{fontFamily:"f1words,arial", letterSpacing: '0.09em'}}>Guess the Driver</h2>
     
     {/* Search Bar */}
-    <div className="relative mb-6">
+    <div ref={dropdownRef} className="relative mb-6">
       <input
         type="text"
         value={searchQuery}
@@ -265,19 +279,18 @@ export default function Home() {
 
 
             
-{/* testing boxes */}
-<div className="mb-8 mt-4">
-  <div className="flex -space-x-[2px] mb-[-2px]">
+{/* Category Headers */}
+<div className="mb-2 mt-4">
+  <div className="grid grid-cols-6 -space-x-[2px]">
     {answerCategories.map((cat) => (
       <div
         key={cat}
-        className="flex-1 px-2 py-2 bg-gray-800 border-2 border-gray-600 text-center text-xs text-gray-200 font-semibold"
+        className="h-10 px-1 bg-gray-800 border-2 border-gray-600 text-center text-[10px] sm:text-xs text-gray-200 font-semibold flex items-center justify-center"
+        style={{fontFamily: "box"}}
       >
         {cat}
       </div>
     ))}
-  </div>
-  <div className="flex -space-x-[2px]">
   </div>
 </div>
 
@@ -285,9 +298,9 @@ export default function Home() {
     
     
   {selectedDrivers.map((driver, idx) => (
-    <div key={idx} className="flex -space-x-[2px] mb-2">
+    <div key={idx} className="grid grid-cols-6 -space-x-[2px] mb-2">
       {/* Name - NO FLIP */}
-      <div className="flex-1 h-24 px-2 bg-gray-700 border-2 border-gray-600 text-center text-base text-white flex items-center justify-center">
+      <div className="h-24 px-2 bg-gray-700 border-2 border-gray-600 text-center text-base text-white flex items-center justify-center">
         {driver.headshot ? (
         <img 
           src={driver.headshot} 
@@ -402,20 +415,20 @@ export default function Home() {
   </span>
 </div>
 
-{/* Championships - FLIPS */}
+{/* podiums - FLIPS */}
 <div 
   className="game-tile"
   style={{
     animation: animatingRow === idx ? `flipTile 1s ease ${3 * 0.5}s both` : 'none',
-    backgroundColor: animatingRow !== idx ? (random && driver.championships === random.championships ? '#16a34a' : '#dc2626') : undefined,
+    backgroundColor: animatingRow !== idx ? (random && driver.podiums === random.podiums ? '#16a34a' : '#dc2626') : undefined,
     // @ts-ignore
-    '--tile-color': random && driver.championships === random.championships ? '#16a34a' : '#dc2626',
+    '--tile-color': random && driver.podiums === random.podiums ? '#16a34a' : '#dc2626',
   }}
 >
   {(() => {
     if(random){
-      let randNum = random?.championships;
-      let driveNum = driver.championships;
+      let randNum = random?.podiums;
+      let driveNum = driver.podiums;
       if(driveNum < randNum){
         return (
           <>
@@ -457,7 +470,7 @@ export default function Home() {
     }
     return <span className="tile-text" style={{
       animation: animatingRow === idx ? `flipText 1s ease ${3 * 0.5}s both` : 'none',
-    }}>{driver.championships}</span>;
+    }}>{driver.podiums}</span>;
   })()}
 </div>
 

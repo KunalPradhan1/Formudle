@@ -50,6 +50,14 @@ body {
   
 }
 
+@font-face {
+    font-family: guess;
+    src: url('/fonts/guess.woff2') format("woff2");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal
+}
+
 
 /* F1 Tile Flip Animation */
 @keyframes flipTile {
