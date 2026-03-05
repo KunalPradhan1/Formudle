@@ -4,7 +4,7 @@
     "fullName": "Max Verstappen",
     "team": "Red Bull Racing",
     "nationality": "Dutch",
-    "permanentNumber": 1,
+    "permanentNumber": 3,
     "dateOfBirth": "1997-09-30",
     "podiums": 127,
     "status": "active",
@@ -47,6 +47,18 @@
     "era": "2020s",
     "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/george-russell-f1-driver-profile-picture.png"
   },
+   {
+    "id": "kimi_antonelli",
+    "fullName": "Kimi Antonelli",
+    "team": "Mercedes",
+    "nationality": "Italy",
+    "permanentNumber": 12,
+    "dateOfBirth": "2006-08-25",
+    "podiums": 12,
+    "status": "active",
+    "era": "2020s",
+    "headshot": "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/kimi-antonelli-f1-driver-profile-picture.png"
+  },
   {
     "id": "charles_leclerc",
     "fullName": "Charles Leclerc",
@@ -76,7 +88,7 @@
     "fullName": "Lando Norris",
     "team": "McLaren",
     "nationality": "Great Britain",
-    "permanentNumber": 4,
+    "permanentNumber": 1,
     "dateOfBirth": "1999-11-13",
     "podiums": 44,
     "status": "active",

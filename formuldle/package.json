@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "auto-text-size": "^0.2.3",
     "js-cookie": "^3.0.5",
     "next": "16.0.10",
