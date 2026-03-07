@@ -3,7 +3,7 @@ import { getAllDrivers } from '@/lib/getRandom';
 
 export async function GET() {
     try {
-        const drivers = getAllDrivers();
+        const drivers = await getAllDrivers();
         return NextResponse.json(drivers);
     } catch (error) {
         console.error('Error in /api/drivers:', error);

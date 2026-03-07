@@ -64,7 +64,17 @@
       "date": "2026-03-04",
       "driverId": "franco_colapinto",
       "driverName": "Franco Colapinto"
+    },
+    {
+      "date": "2026-03-05",
+      "driverId": "kimi_antonelli",
+      "driverName": "Kimi Antonelli"
+    },
+    {
+      "date": "2026-03-06",
+      "driverId": "lance_stroll",
+      "driverName": "Lance Stroll"
     }
   ],
-  "lastUpdated": "2026-03-04T20:50:34.475Z"
+  "lastUpdated": "2026-03-06T19:12:03.927Z"
 }

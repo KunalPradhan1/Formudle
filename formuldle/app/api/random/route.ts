@@ -3,7 +3,7 @@ import getRandom from '@/lib/getRandom';
 
 export async function GET() {
     try {
-        const driver = getRandom();
+        const driver = await getRandom();
         
         if (!driver) {
             return NextResponse.json(

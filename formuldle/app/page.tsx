@@ -219,7 +219,7 @@ export default function Home() {
               ))}
             </div>
             <h1 className="text-5xl font-bold text-white tracking-wider" style={{fontFamily: 'f1words, Arial'}}>
-              FORMULDLE
+              FORMUDLE
             </h1>
             <div className="grid grid-cols-4 grid-rows-4 w-16 h-16 border-2 border-white">
               {[...Array(16)].map((_, i) => (
