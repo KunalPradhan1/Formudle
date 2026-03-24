@@ -1,11 +1,39 @@
-# Formuldle
-This is creating a wordle like game for guessing f1 drivers
+
+# formudle.one
+
+A Formula 1 driver guessing game consisting of drivers of the past and today
+
+#
+## Authors
+
+- [@KunalPradhan1](https://www.github.com/KunalPradhan1)
 
 
-# Running
+## Demo
 
-cd into formuldle
 
-then run npm install
+![Formudle Demo](formuldle/public/form.gif)
 
-then now run locally using npm run dev
+
+
+## Tech Stack
+
+**Framework:** Next.js
+
+**Hosted:** Vercel
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at formudle@gmail.com
+
+
+## Installation
+
+Install formudle with npm
+
+```bash
+  npm install formudle
+  cd formudle
+```
+    

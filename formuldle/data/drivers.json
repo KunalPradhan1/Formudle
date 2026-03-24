@@ -286,7 +286,92 @@
     "status": "active",
     "era": "2020s",
     "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/isack-hadjar-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "yuki_tsunoda",
+    "fullName": "Yuki Tsunoda",
+    "team": "Red Bull Racing",
+    "nationality": "Japan",
+    "permanentNumber": 22,
+    "dateOfBirth": "2000-05-11",
+    "podiums": 0,
+    "status": "active",
+    "era": "2020s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/yuki-tsunoda/yuki-tsunoda-hero-driver.png"
+  },
+  {
+    "id": "daniel_ricciardo",
+    "fullName": "Daniel Ricciardo",
+    "team": "Racing Bulls",
+    "nationality": "Australia",
+    "permanentNumber": 3,
+    "dateOfBirth": "1989-07-01",
+    "podiums": 32,
+    "status": "non-active",
+    "era": "2010s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/daniel-ricciardo-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "sebastian_vettel",
+    "fullName": "Sebastian Vettel",
+    "team": "Aston Martin",
+    "nationality": "Germany",
+    "permanentNumber": 5,
+    "dateOfBirth": "1987-07-03",
+    "podiums": 122,
+    "status": "non-active",
+    "era": "2010s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/sebastian-vettel-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "mick_schumacher",
+    "fullName": "Mick Schumacher",
+    "team": "Haas",
+    "nationality": "Germany",
+    "permanentNumber": 47,
+    "dateOfBirth": "1999-03-22",
+    "podiums": 0,
+    "status": "non-active",
+    "era": "2020s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/mick-schumacher-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "nyck_devries",
+    "fullName": "Nyck de Vries",
+    "team": "Racing Bulls",
+    "nationality": "Dutch",
+    "permanentNumber": 21,
+    "dateOfBirth": "1995-02-06",
+    "podiums": 0,
+    "status": "non-active",
+    "era": "2020s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/nyck-de-vries-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "logan_sargeant",
+    "fullName": "Logan Sargeant",
+    "team": "Williams",
+    "nationality": "America",
+    "permanentNumber": 2,
+    "dateOfBirth": "2000-12-31",
+    "podiums": 0,
+    "status": "non-active",
+    "era": "2020s",
+    "headshot" : "https://www.kymillman.com/wp-content/uploads/f1/pages/driver-profiles/driver-faces/logan-sargeant-f1-driver-profile-picture.png"
+  },
+  {
+    "id": "nicholas_latifi",
+    "fullName": "Nicholas Latifi",
+    "team": "Williams",
+    "nationality": "Canada",
+    "permanentNumber": 6,
+    "dateOfBirth": "1995-06-29",
+    "podiums": 0,
+    "status": "non-active",
+    "era": "2020s",
+    "headshot" : "https://e0.365dm.com/f1/drivers/256x256/h_full_1502.png"
   }
+  
   
   
 
